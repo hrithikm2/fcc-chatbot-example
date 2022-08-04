@@ -9,7 +9,9 @@ const LearningOptions = (props) => {
       handler: props.actionProvider.handleJavascriptList,
       id: 1,
     },
-    { text: "Data visualization", handler: () => {}, id: 2 },
+    { text: "Data visualization", handler:
+      props.actionProvider.handleDVList,
+     id: 2 },
     { text: "APIs", handler: () => {}, id: 3 },
     { text: "Security", handler: () => {}, id: 4 },
     { text: "Interview prep", handler: () => {}, id: 5 },
@@ -27,5 +29,7 @@ const LearningOptions = (props) => {
 
   return <div className="learning-options-container">{optionsMarkup}</div>;
 };
+
+
 
 export default LearningOptions;
